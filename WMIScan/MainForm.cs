@@ -110,7 +110,6 @@ namespace WMIScan
                     foreach (ManagementObject mo in queryCollection)
                     {
                         string tmp = string.Join("", ((byte[])mo["CreatorSID"]).Select(x => x.ToString()));
-                        MessageBox.Show(tmp + "\r\n" + id);
                         if (tmp == id)
                         {
                             mo.Delete();
